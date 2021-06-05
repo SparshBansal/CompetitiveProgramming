@@ -5,3 +5,4 @@ a.out.dSYM
 .DS_Store
 *.in
 *.out
+Java/target/
