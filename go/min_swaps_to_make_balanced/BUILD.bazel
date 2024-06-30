@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_binary")
+
+go_library(
+    name = "min_swaps_to_make_balanced",
+    srcs = ["main.go"],
+    importpath = "github.com/SparshBansal/min_swaps_to_make_balanced",
+    visibility = ["//visibility:public"],
+)
+
+go_binary(
+    name = "main",
+    data = ["in.txt"],
+    embed = [":min_swaps_to_make_balanced"],
+    visibility = ["//visibility:public"],
+)

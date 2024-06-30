@@ -1,0 +1,21 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "greetings_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/SparshBansal/greetings",
+    visibility = ["//visibility:private"],
+)
+
+go_binary(
+    name = "greetings",
+    embed = [":greetings_lib"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "lib",
+    srcs = ["main.go"],
+    importpath = "",
+    visibility = ["//visibility:private"],
+)
