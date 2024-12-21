@@ -9,7 +9,7 @@ go_library(
 
 go_binary(
     name = "greetings",
-    embed = [":greetings_lib"],
+    embed = [":lib"],
     visibility = ["//visibility:public"],
 )
 
